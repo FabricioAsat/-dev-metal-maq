@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --font-nunito: "Nunito", sans-serif;
+}
+
+html,
+:root {
+  @apply font-nunito text-neutral-800 font-medium;
+}
