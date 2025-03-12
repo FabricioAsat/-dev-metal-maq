@@ -13,7 +13,7 @@ export const Header = () => {
         animate={{ opacity: 1 }} // termina opacidad 1
         transition={{ duration: 0.5 }}
       >
-        <span className="md:hidden">
+        <span className="md:hidden flex items-center justify-start">
           <Hamburger />
         </span>
 
