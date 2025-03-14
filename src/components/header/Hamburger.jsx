@@ -73,7 +73,7 @@ export const Hamburger = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute bg-black/50 w-full h-[calc(100vh-100%)] left-0 top-full"
+            className="fixed bg-black/50 w-full left-0 top-12 md:top-14 lg:top-16 z-50 h-[calc(100vh-48px)] md:h-[calc(100vh-56px)] lg:h-[calc(100vh-64px)])"
           >
             <ul className="flex flex-col items-start text-base font-bold italic bg-white px-5 border-t-2 border-t-neutral-200 py-2">
               {menuItems.map((item, index) => (

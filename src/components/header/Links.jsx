@@ -5,7 +5,7 @@ export const Links = () => {
 
   return (
     <motion.nav
-      className="items-center justify-center w-full gap-x-7 hidden md:flex"
+      className="items-center justify-center w-full gap-x-7 hidden lg:flex"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
