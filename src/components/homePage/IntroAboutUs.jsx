@@ -1,32 +1,63 @@
+import React from "react";
 import { motion } from "motion/react";
 import { Link } from "wouter";
 
-import welderImage from "../../assets/welder.svg";
-import designerImage from "../../assets/designer.svg";
-import maintenanceImage from "../../assets/maintenance.svg";
-import nextImage from "../../assets/next.svg";
+import groupPhotoImage from "../../assets/group-photo.svg";
 
 export const IntroAboutUs = () => {
-  const services = [
-    { id: 1, title: "Diseño y Fabricación", image: designerImage },
-    { id: 2, title: "Soldadura especializada", image: welderImage },
-    { id: 3, title: "Mantenimiento industrial", image: maintenanceImage },
-    { id: 4, title: "Más servicios...", image: nextImage },
-  ];
-
   return (
-    <section>
-      <article className="grid grid-cols-2 md:grid-cols-4 px-5 justify-items-center gap-5">
-        {services.map(({ title, image, id }) => (
-          <Link
-            href="/services"
-            key={id}
-            className="rounded-xl border-2 border-neutral-800 py-3 flex flex-col gap-y-5 items-center justify-center max-w-32 w-full"
+    <section className="mx-auto bg-white/25 flex flex-col gap-y-3 lg:px-10 lg:col-span-2">
+      <motion.picture
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+      >
+        <img
+          src={groupPhotoImage}
+          alt="Group team photo"
+          className="w-full max-w-2xl mx-auto"
+        />
+      </motion.picture>
+
+      <article className="flex flex-col items-center max-w-xl mx-auto px-5 lg:px-10 -translate-y-10 pt-2">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-2xl lg:text-3xl font-bold text-center bg-white px-8 rounded-xl py-2"
+        >
+          Sobre nosotros
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+          className="text-sm lg:text-base font-medium text-center italic text-neutral-600 mt-3"
+        >
+          Somos una empresa metalúrgica con más de 700m² de infraestructura,
+          especializada en diseño, fabricación y reparación de máquinas y
+          dispositivos industriales
+        </motion.p>
+
+        <nav className="w-full flex items-center justify-end">
+          <motion.button
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
           >
-            <img src={image} alt="Service image" className="w-16 h-16" />
-            <h3 className="text-center text-sm">{title}</h3>
-          </Link>
-        ))}
+            <Link
+              href="/about"
+              className="text-sm italic font-normal text-sky-400 underline-offset-1 underline"
+            >
+              Leer más...
+            </Link>
+          </motion.button>
+        </nav>
       </article>
     </section>
   );
