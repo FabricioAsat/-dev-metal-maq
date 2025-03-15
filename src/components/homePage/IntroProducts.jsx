@@ -66,7 +66,33 @@ export const IntroProducts = () => {
   }
 
   return (
-    <div className="w-full max-w-3xl mx-auto">
+    <div className="w-full max-w-4xl mx-auto mt-10 rounded-xl">
+      <div>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-2xl lg:text-3xl font-bold text-center bg-white px-8 rounded-xl pb-2"
+        >
+          Qué hacemos en Metal-Maq
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="px-5 mb-5 text-sm italic text-center text-neutral-600"
+        >
+          En <b>Metal-Maq</b>, nos especializamos en la fabricación y mecanizado
+          de piezas metálicas de alta precisión, garantizando durabilidad,
+          resistencia y exactitud en cada producto. Nos enfocamos en ofrecer
+          soluciones personalizadas para la industria, utilizando tecnología de
+          vanguardia y materiales de primera calidad
+          <hr className="border-2 w-1/4 mx-auto border-sky-300 mt-2" />
+        </motion.p>
+      </div>
       <Slider {...settings}>
         {products.map(({ image, title, desc }, index) => (
           <picture
@@ -77,24 +103,29 @@ export const IntroProducts = () => {
             onMouseEnter={() => {
               setHovering(true);
             }}
-            className="relative w-full h-full"
+            className="relative w-full h-full rounded-xl"
           >
-            <img src={image} alt={title + " Image"} />
+            <img
+              src={image}
+              alt={title + " Image"}
+              className="select-none outline-none"
+            />
             <motion.span
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isHover ? 1 : 0, y: isHover ? 0 : 20 }}
-              viewport={{ once: false }}
+              animate={{ opacity: 1, y: 20 }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.5,
                 ease: "easeOut",
                 delay: 0.3,
               }}
-              className="absolute bottom-0 flex flex-col items-center justify-end w-full h-full pb-5 bg-gradient-to-t from-black/90 via-black/50 to-transparent"
+              className="absolute bottom-0 flex flex-col items-center justify-end w-full h-2/3 pb-5 bg-gradient-to-t from-black/75 via-black/50 to-transparent rounded-xl"
             >
               <h4 className="max-w-xl text-base font-bold text-center text-white md:text-lg">
                 {title}
               </h4>
-              <small className="max-w-xl px-5 text-xs italic text-center text-neutral-200 md:text-sm">
+              <hr className="border w-1/5 mx-auto border-sky-300 mb-2" />
+              <small className="max-w-xl px-5 text-xs italic text-center text-white md:text-sm">
                 {desc}
               </small>
             </motion.span>

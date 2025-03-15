@@ -35,22 +35,10 @@ export const IntroServices = () => {
             className="px-5 mb-2 text-2xl font-bold text-center lg:text-3xl"
           >
             Calidad y Precisión por proyecto
+            <hr className="border-2 w-1/2 mx-auto border-sky-300 mt-1 mb-2" />
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="px-5 mb-5 text-sm italic text-center text-neutral-600"
-          >
-            En <b>Metal-Maq</b>, nos especializamos en la fabricación y
-            mecanizado de piezas metálicas de alta precisión, garantizando
-            durabilidad, resistencia y exactitud en cada producto. Nos enfocamos
-            en ofrecer soluciones personalizadas para la industria, utilizando
-            tecnología de vanguardia y materiales de primera calidad
-          </motion.p>
 
-          <ul className="flex flex-col items-center justify-center w-full pl-5 mx-auto gap-y-5">
+          <ul className="flex flex-col items-center justify-center w-full px-2 mx-auto gap-y-5">
             {services.map(({ title, image }, index) => (
               <motion.li
                 key={index}
@@ -101,9 +89,19 @@ export const IntroServices = () => {
           </ul>
         </article>
 
-        <picture className="px-5 -order-1 lg:order-1">
+        <motion.picture
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+            delay: 0.3,
+          }}
+          className="px-5 -order-1 lg:order-1"
+        >
           <img src={bossImage} alt="" className="w-full" />
-        </picture>
+        </motion.picture>
       </article>
     </section>
   );

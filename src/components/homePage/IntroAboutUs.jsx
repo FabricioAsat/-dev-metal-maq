@@ -6,7 +6,7 @@ import groupPhotoImage from "../../assets/group-photo.svg";
 
 export const IntroAboutUs = () => {
   return (
-    <section className="mx-auto bg-white/25 flex flex-col gap-y-3 lg:px-10 lg:col-span-2">
+    <section className="mx-auto bg-white/25 flex flex-col gap-y-3 lg:px-10 lg:col-span-2 mt-5">
       <motion.picture
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -29,6 +29,7 @@ export const IntroAboutUs = () => {
           className="text-2xl lg:text-3xl font-bold text-center bg-white px-8 rounded-xl py-2"
         >
           Sobre nosotros
+          <hr className="border-2 w-1/2 mx-auto border-sky-300" />
         </motion.h2>
 
         <motion.p
