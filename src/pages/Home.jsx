@@ -1,6 +1,7 @@
 import { Body } from "../components/body/Body";
 import { Intro } from "../components/homePage/Intro";
 import { IntroAboutUs } from "../components/homePage/IntroAboutUs";
+import { IntroProducts } from "../components/homePage/introProducts";
 import { IntroServices } from "../components/homePage/IntroServices";
 
 export const Home = () => {
@@ -9,6 +10,7 @@ export const Home = () => {
       <Intro />
       <IntroAboutUs />
       <IntroServices />
+      <IntroProducts />
     </Body>
   );
 };

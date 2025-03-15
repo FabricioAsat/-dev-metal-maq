@@ -6,9 +6,10 @@
 
 html,
 :root {
-  @apply font-nunito text-neutral-800 font-medium selection:bg-emerald-200;
+  @apply font-medium font-nunito text-neutral-800 selection:bg-emerald-200;
 }
 
 .test {
   @apply text-yellow-200;
 }
+
