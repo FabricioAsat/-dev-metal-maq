@@ -87,16 +87,20 @@ export const ServiceDetail = ({ service }) => {
         ))}
       </ul>
 
-      <button className="mt-6">
+      <motion.button
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="mt-5 md:mt-10"
+      >
         <Link
           href="/contact"
-          className={
-            "px-4 py-2 bg-emerald-200 font-bold rounded-lg text-neutral-600 active:scale-95"
-          }
+          className="outline-none text-sm lg:text-base bg-neutral-700 border-2 text-white border-neutral-600 hover:bg-neutral-600 hover:border-neutral-600 px-3 py-1.5 lg:py-2 lg:px-4 rounded-xl transition-all duration-300 ease-in-out active:scale-95 hover:shadow-md hover:shadow-neutral-600/25"
         >
           Consultar sobre este servicio
         </Link>
-      </button>
+      </motion.button>
     </article>
   );
 };

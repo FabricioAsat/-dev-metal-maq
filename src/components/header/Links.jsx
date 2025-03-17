@@ -6,7 +6,7 @@ export const Links = () => {
   const menuItems = [
     { title: "Inicio", route: "/" },
     { title: "Sobre nosotros", route: "/about" },
-    { title: "Services", route: "/services" },
+    { title: "Servicios", route: "/services" },
     { title: "Inicio", route: "/" },
   ];
 
