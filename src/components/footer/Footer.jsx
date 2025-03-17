@@ -1,9 +1,11 @@
+import { Contacts } from "./Contacts";
 import { Clients } from "./Clients";
 
 export const Footer = () => {
   return (
-    <div className="py-20 bg-fuchsia-300 mt-20">
+    <footer className="mt-10">
       <Clients />
-    </div>
+      <Contacts />
+    </footer>
   );
 };

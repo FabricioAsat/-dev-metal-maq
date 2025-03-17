@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -38,7 +40,7 @@ export const Clients = () => {
     slidesToShow: 4, // Muestra 4 logos a la vez (ajústalo según el diseño)
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 1500,
     arrows: false, // Si quieres flechas, ponlo en true
     dots: false, // Si quieres indicadores, ponlo en true
     responsive: [
@@ -57,25 +59,48 @@ export const Clients = () => {
     ],
   };
   return (
-    <div className="w-full px-4 py-10">
-      <h2 className="text-center text-2xl font-bold mb-6">Nuestros Clientes</h2>
-      <Slider {...settings}>
-        {clients.map(({ image, link }, index) => (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            key={index}
-            className="flex items-center justify-center p-4"
-          >
-            <img
-              src={image}
-              alt={`Cliente ${index + 1}`}
-              className="h-20 mx-auto grayscale hover:grayscale-0 outline-none transition-all duration-300 ease-in-out select-none"
-            />
-          </a>
-        ))}
-      </Slider>
-    </div>
+    <section className="w-full px-4 py-10">
+      <div className="max-w-xl mx-auto mb-10">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-2xl lg:text-3xl font-bold text-center"
+        >
+          Nuestros clientes
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="px-5 text-sm italic text-center text-neutral-600 mb-2"
+        >
+          Estos son los profesionales que confian en nosotros
+        </motion.p>
+        <hr className="border-2 w-1/3 mx-auto border-sky-300" />
+      </div>
+
+      <article className="max-w-7xl mx-auto">
+        <Slider {...settings}>
+          {clients.map(({ image, link }, index) => (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={index}
+              className="flex items-center justify-center p-4"
+            >
+              <img
+                src={image}
+                alt={`Cliente ${index + 1}`}
+                className="h-20 mx-auto grayscale hover:grayscale-0 outline-none transition-all duration-300 ease-in-out select-none"
+              />
+            </a>
+          ))}
+        </Slider>
+      </article>
+    </section>
   );
 };

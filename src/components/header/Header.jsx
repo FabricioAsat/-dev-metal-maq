@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-import { Logo } from "./Logo";
+import { Logo } from "../Logo";
 import { Hamburger } from "./Hamburger";
 import { Links } from "./Links";
 

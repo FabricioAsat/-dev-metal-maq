@@ -9,7 +9,6 @@ import industrialDeviceImage from "../../assets/industrial-device.svg";
 import CNCImage from "../../assets/CNC.svg";
 import welderImage from "../../assets/welder.svg";
 import pressStampingImage from "../../assets/press-stamping.svg";
-import { useState } from "react";
 
 const products = [
   {
@@ -59,12 +58,6 @@ var settings = {
 };
 
 export const IntroProducts = () => {
-  const [isHover, setIsHover] = useState(false);
-
-  function setHovering(isHover) {
-    setIsHover(isHover);
-  }
-
   return (
     <div className="w-full max-w-4xl mx-auto mt-10 rounded-xl">
       <div>
@@ -83,27 +76,21 @@ export const IntroProducts = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="px-5 mb-5 text-sm italic text-center text-neutral-600"
+          className="px-5 text-sm italic text-center text-neutral-600"
         >
           En <b>Metal-Maq</b>, nos especializamos en la fabricación y mecanizado
           de piezas metálicas de alta precisión, garantizando durabilidad,
           resistencia y exactitud en cada producto. Nos enfocamos en ofrecer
           soluciones personalizadas para la industria, utilizando tecnología de
           vanguardia y materiales de primera calidad
-          <hr className="border-2 w-1/4 mx-auto border-sky-300 mt-2" />
         </motion.p>
+        <hr className="border-2 w-1/4 mx-auto border-sky-300 mt-2 mb-5" />
       </div>
       <Slider {...settings}>
         {products.map(({ image, title, desc }, index) => (
           <picture
             key={index}
-            onMouseLeave={() => {
-              setHovering(false);
-            }}
-            onMouseEnter={() => {
-              setHovering(true);
-            }}
-            className="relative w-full h-full rounded-xl"
+            className="relative w-full h-full rounded-xl select-none"
           >
             <img
               src={image}
