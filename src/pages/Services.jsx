@@ -117,11 +117,11 @@ const products = [
 export const Services = () => {
   return (
     <Body>
-      <div className="flex flex-col max-w-5xl px-2 mx-auto gap-y-10">
+      <section className="flex flex-col max-w-5xl px-2 mx-auto gap-y-10">
         {products.map((service) => (
           <ServiceDetail service={service} />
         ))}
-      </div>
+      </section>
     </Body>
   );
 };
