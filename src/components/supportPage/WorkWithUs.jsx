@@ -9,7 +9,6 @@ export const WorkWithUs = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("Form work with us: ", formInfo);
   }
 
   return (

@@ -10,7 +10,6 @@ export const Claim = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("Form claim: ", formInfo);
   }
 
   return (

@@ -22,10 +22,7 @@ export const ContractService = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("Enviado");
   }
-
-  console.log(formInfo);
 
   return (
     <div className="flex flex-col items-center justify-center gap-10">

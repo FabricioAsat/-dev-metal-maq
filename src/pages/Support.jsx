@@ -6,6 +6,8 @@ import { WorkWithUs } from "../components/supportPage/WorkWithUs";
 import { Claim } from "../components/supportPage/Claim";
 import { Other } from "../components/supportPage/Other";
 
+import logoImg from "/logo.svg";
+
 const comunicationReason = [
   "Contratar un servicio",
   "Trabaja con nosotros",
@@ -24,16 +26,19 @@ export const Support = () => {
 
   return (
     <Body>
-      <aside className="px-2 py-5 text-white md:px-5 bg-neutral-800">
-        <h3 className="text-2xl font-bold">Comuniquese con Metal-Maq</h3>
-        <small className="text-sm italic text-neutral-300">
-          Estamos para ayudarte
-        </small>
-      </aside>
+      <article className="px-2 py-5 md:px-5 bg-neutral-100 flex items-center gap-x-5">
+        <picture className="hidden md:block">
+          <img src={logoImg} alt="Logo" className="h-20 w-32 object-cover" />
+        </picture>
+        <aside className="flex flex-col items-start justify-center">
+          <h3 className="text-2xl font-bold">Comuniquese con Metal-Maq</h3>
+          <small className="text-sm italic">Estamos para ayudarte</small>
+        </aside>
+      </article>
       <nav className="px-2 py-5 md:px-5">
         <a
           href="#contacts"
-          className="px-2 py-2 text-base font-bold lg:px-3 hover:text-neutral-500"
+          className="px-2 py-2 text-base font-bold lg:px-3 hover:text-neutral-500 underline underline-offset-2"
         >
           Ver nuetros contactos
         </a>

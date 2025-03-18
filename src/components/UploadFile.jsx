@@ -37,7 +37,7 @@ export const UploadFile = () => {
             <div className="p-5 text-center bg-white rounded-md">
               <h2 className="text-2xl font-black text-red-400">¡Ups!</h2>
               <p className="text-lg italic text-neutral-700">
-                La versión gratuita de FormSubmit no admite subida de archivos
+                Se necesita de un backend para subir archivos
               </p>
               <button
                 onClick={closeModal}

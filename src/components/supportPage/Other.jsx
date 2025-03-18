@@ -6,8 +6,6 @@ export const Other = () => {
   const [formInfo, setFormInfo] = useState({
     reason: "Other",
   });
-
-  console.log("Form other: ", formInfo);
   return (
     <form className="flex flex-col items-center justify-center w-full max-w-3xl mx-auto mt-5">
       <TextArea
