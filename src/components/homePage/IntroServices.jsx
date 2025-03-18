@@ -73,7 +73,7 @@ export const IntroServices = () => {
               className=""
             >
               <Link
-                href={"/contacts"}
+                href={"/support"}
                 className={`flex items-center gap-x-4 justify-start w-full lg:px-5 px-3 border-2 border-emerald-500 hover:bg-emerald-50 py-1.5 lg:py-2 rounded-md mt-5 hover:shadow-md hover:shadow-emerald-500/25 transition-all duration-300`}
               >
                 <img
