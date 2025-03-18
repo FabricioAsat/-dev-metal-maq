@@ -61,7 +61,7 @@ export const ContractService = () => {
         <TextArea
           objName={"description"}
           objSetter={setFormInfo}
-          placeholder="Cuál es su consulta?"
+          placeholder="Cuál es su duda?"
         />
 
         <Submit value={"Enviar consulta"} />

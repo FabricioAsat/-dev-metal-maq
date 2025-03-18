@@ -2,21 +2,18 @@ import { useState, cloneElement, useEffect } from "react";
 import { Body } from "../components/body/Body";
 import { AccordionSelect } from "../components/supportPage/AccordionSelect";
 import { ContractService } from "../components/supportPage/ContractService";
-import { Consultation } from "../components/supportPage/Consultation";
 import { WorkWithUs } from "../components/supportPage/WorkWithUs";
 import { Claim } from "../components/supportPage/Claim";
 import { Other } from "../components/supportPage/Other";
 
 const comunicationReason = [
   "Contratar un servicio",
-  "Consulta",
   "Trabaja con nosotros",
   "Reclamo",
   "Otro",
 ];
 const reasonComponents = [
   <ContractService />,
-  <Consultation />,
   <WorkWithUs />,
   <Claim />,
   <Other />,
@@ -42,10 +39,10 @@ export const Support = () => {
         </a>
       </nav>
 
-      <h3 className="mt-10 text-2xl font-bold text-center lg:text-3xl">
+      <h3 className="max-w-3xl mx-auto mt-10 text-2xl font-bold text-center lg:text-3xl">
         Consulta personalizada
       </h3>
-      <div className="grid grid-cols-1 px-5 mt-5">
+      <div className="grid w-full max-w-3xl grid-cols-1 px-5 mx-auto mt-5">
         <AccordionSelect
           options={comunicationReason}
           objName={"reason"}

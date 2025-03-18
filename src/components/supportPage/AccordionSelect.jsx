@@ -38,7 +38,7 @@ export function AccordionSelect({
   }
 
   return (
-    <div className="relative w-full mx-auto" ref={dropdownRef}>
+    <div className="relative w-full max-w-3xl mx-auto" ref={dropdownRef}>
       {/* Input que actúa como botón */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
