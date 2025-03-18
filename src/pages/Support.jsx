@@ -1,4 +1,4 @@
-import { useState, cloneElement, useEffect } from "react";
+import { useState } from "react";
 import { Body } from "../components/body/Body";
 import { AccordionSelect } from "../components/supportPage/AccordionSelect";
 import { ContractService } from "../components/supportPage/ContractService";
