@@ -2,12 +2,11 @@ import { motion } from "motion/react";
 import { Link } from "wouter";
 
 export const Links = () => {
-  // const menuItems = ["Inicio", "Sobre nosotros", "Servicios", "Contactos"];
   const menuItems = [
     { title: "Inicio", route: "/" },
     { title: "Sobre nosotros", route: "/about" },
     { title: "Servicios", route: "/services" },
-    { title: "Inicio", route: "/" },
+    { title: "Contactos", route: "/support" },
   ];
 
   return (

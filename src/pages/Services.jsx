@@ -118,8 +118,8 @@ export const Services = () => {
   return (
     <Body>
       <section className="flex flex-col max-w-5xl px-2 mx-auto gap-y-10">
-        {products.map((service) => (
-          <ServiceDetail service={service} />
+        {products.map((service, index) => (
+          <ServiceDetail key={index} service={service} />
         ))}
       </section>
     </Body>

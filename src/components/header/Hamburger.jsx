@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { Link } from "wouter";
 
 export const Hamburger = () => {
-  const menuItems = ["Inicio", "Sobre nosotros", "Servicios", "Contactos"];
+  const menuItems = [
+    { title: "Inicio", route: "/" },
+    { title: "Sobre nosotros", route: "/about" },
+    { title: "Servicios", route: "/services" },
+    { title: "Contactos", route: "/support" },
+  ];
+
   const [isOpen, setIsOpen] = useState(false);
 
   function handleClick() {
@@ -76,17 +83,19 @@ export const Hamburger = () => {
             className="fixed bg-black/50 w-full left-0 top-12 md:top-14 lg:top-16 z-50 h-[calc(100vh-48px)] md:h-[calc(100vh-56px)] lg:h-[calc(100vh-64px)])"
           >
             <ul className="flex flex-col items-start text-base font-bold italic bg-white px-5 border-t-2 border-t-neutral-200 py-2">
-              {menuItems.map((item, index) => (
-                <motion.button
-                  key={item}
+              {menuItems.map(({ route, title }, index) => (
+                <motion.li
+                  key={index}
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="py-1 hover:text-neutral-500"
                 >
-                  {item}
-                </motion.button>
+                  <Link onClick={handleClick} href={route}>
+                    {title}
+                  </Link>
+                </motion.li>
               ))}
             </ul>
           </motion.div>

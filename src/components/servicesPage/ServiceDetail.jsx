@@ -95,7 +95,7 @@ export const ServiceDetail = ({ service }) => {
         className="mt-5 md:mt-10"
       >
         <Link
-          href="/contact"
+          href="/support?r=0"
           className="outline-none text-sm lg:text-base bg-neutral-700 border-2 text-white border-neutral-600 hover:bg-neutral-600 hover:border-neutral-600 px-3 py-1.5 lg:py-2 lg:px-4 rounded-xl transition-all duration-300 ease-in-out active:scale-95 hover:shadow-md hover:shadow-neutral-600/25"
         >
           Consultar sobre este servicio
