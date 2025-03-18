@@ -40,7 +40,7 @@ export const Claim = () => {
           objName={"description"}
           placeholder="Cuál es la razón de su reclamo?"
         />
-        <Submit value={"Enviar reclamo"} />
+        <Submit value={"Desactivado para esta sección"} />
       </form>
     </div>
   );

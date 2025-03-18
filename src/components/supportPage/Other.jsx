@@ -15,7 +15,7 @@ export const Other = () => {
         objSetter={setFormInfo}
         placeholder="Cuál es su consulta?"
       />
-      <Submit value={"Enviar consulta"} />
+      <Submit value={"Desactivado para esta sección"} />
     </form>
   );
 };

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-export const Submit = ({ value, isDisabled = false }) => {
+export const Submit = ({ value, isDisabled = true }) => {
   return (
     <motion.input
       initial={{ opacity: 0, y: -10 }}

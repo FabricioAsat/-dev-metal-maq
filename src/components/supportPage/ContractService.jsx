@@ -33,6 +33,8 @@ export const ContractService = () => {
         onSubmit={handleSubmit}
         className="grid w-full grid-cols-1 gap-5 mt-10 md:grid-cols-2 justify-items-center"
       >
+        <input type="hidden" name="_subject" value="consulta" />
+
         <AccordionSelect
           options={services}
           objName={"serviceType"}
@@ -64,7 +66,7 @@ export const ContractService = () => {
           placeholder="Cuál es su duda?"
         />
 
-        <Submit value={"Enviar consulta"} />
+        <Submit value={"Desactivado para esta sección"} />
       </form>
     </div>
   );
