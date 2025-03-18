@@ -27,15 +27,23 @@ export const Support = () => {
 
   return (
     <Body>
-      <aside className="px-2 py-5 text-white bg-neutral-800">
+      <aside className="px-2 py-5 text-white md:px-5 bg-neutral-800">
         <h3 className="text-2xl font-bold">Comuniquese con Metal-Maq</h3>
         <small className="text-sm italic text-neutral-300">
           Estamos para ayudarte
         </small>
       </aside>
+      <nav className="px-2 py-5 md:px-5">
+        <a
+          href="#contacts"
+          className="px-2 py-2 text-base font-bold lg:px-3 hover:text-neutral-500"
+        >
+          Ver nuetros contactos
+        </a>
+      </nav>
 
-      <h3 className="mt-10 text-2xl font-bold text-center">
-        Rellene los siguientes campos
+      <h3 className="mt-10 text-2xl font-bold text-center lg:text-3xl">
+        Consulta personalizada
       </h3>
       <div className="grid grid-cols-1 px-5 mt-5">
         <AccordionSelect

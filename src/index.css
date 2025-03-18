@@ -6,7 +6,7 @@
 
 html,
 :root {
-  @apply font-medium font-nunito text-neutral-800 selection:bg-emerald-200;
+  @apply font-medium font-nunito text-neutral-800 selection:bg-emerald-200 scroll-smooth;
 }
 
 .test {

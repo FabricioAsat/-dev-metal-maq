@@ -6,7 +6,7 @@ export const Links = () => {
     { title: "Inicio", route: "/" },
     { title: "Sobre nosotros", route: "/about" },
     { title: "Servicios", route: "/services" },
-    { title: "Contactos", route: "/support" },
+    { title: "Soporte", route: "/support" },
   ];
 
   return (

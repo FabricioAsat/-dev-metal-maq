@@ -33,8 +33,8 @@ export const Intro = () => {
           transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
         >
           <Link
-            href="/contact"
-            className="outline-none text-sm lg:text-base font-bold bg-neutral-800 border-2 text-white border-neutral-800 hover:bg-neutral-700 hover:border-neutral-700 px-3 py-1.5 lg:py-2 lg:px-4 rounded-xl transition-all duration-300 ease-in-out active:scale-95 hover:shadow-md hover:shadow-neutral-700/50"
+            href="/support"
+            className="outline-none text-sm lg:text-base font-bold bg-neutral-800 border-2 text-white border-neutral-800 hover:bg-neutral-700 hover:border-neutral-700 px-3 py-1.5 lg:py-2 lg:px-4 rounded-xl transition-all duration-300 ease-in-out hover:shadow-md hover:shadow-neutral-700/50"
           >
             Contáctanos
           </Link>
@@ -47,10 +47,10 @@ export const Intro = () => {
           transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
         >
           <Link
-            href="/products"
-            className="outline-none flex text-sm lg:text-base font-bold bg-transparent text-neutral-800 px-3 py-1.5 lg:py-2 lg:px-4 rounded-xl border-2 border-neutral-800 hover:bg-neutral-100 transition-all duration-300 ease-in-out active:scale-9 hover:shadow-md hover:shadow-neutral-500/50"
+            href="/services"
+            className="outline-none flex text-sm lg:text-base font-bold bg-transparent text-neutral-800 px-3 py-1.5 lg:py-2 lg:px-4 rounded-xl border-2 border-neutral-800 hover:bg-neutral-100 transition-all duration-300 ease-in-out hover:shadow-md hover:shadow-neutral-500/50"
           >
-            <p>Nuestros productos</p>
+            <p>Nuestros servicios</p>
             <span className="pl-2">{">"}</span>
           </Link>
         </motion.button>

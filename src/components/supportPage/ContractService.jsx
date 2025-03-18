@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useState } from "react";
+
 import { AccordionSelect } from "./AccordionSelect";
 import { Input } from "../Input";
 import { TextArea } from "../TextArea";
@@ -17,7 +18,6 @@ const services = [
 export const ContractService = () => {
   const [formInfo, setFormInfo] = useState({
     reason: "Contratar un servicio",
-    serviceType: "",
   });
 
   function handleSubmit(e) {
@@ -46,6 +46,7 @@ export const ContractService = () => {
         />
 
         <Input
+          type="email"
           placeholder="Introduce tu correo electrónico"
           objName={"email"}
           objSetter={setFormInfo}
@@ -53,7 +54,7 @@ export const ContractService = () => {
 
         <Input
           placeholder="Introduce tu número telefónico"
-          objName={"email"}
+          objName={"telephone"}
           objSetter={setFormInfo}
         />
 
@@ -65,10 +66,6 @@ export const ContractService = () => {
 
         <Submit value={"Enviar consulta"} />
       </form>
-
-      <aside className="">
-        <h3>Otros métodos</h3>
-      </aside>
     </div>
   );
 };

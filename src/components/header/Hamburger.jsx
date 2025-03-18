@@ -7,7 +7,7 @@ export const Hamburger = () => {
     { title: "Inicio", route: "/" },
     { title: "Sobre nosotros", route: "/about" },
     { title: "Servicios", route: "/services" },
-    { title: "Contactos", route: "/support" },
+    { title: "Soporte", route: "/support" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,7 @@ export const Hamburger = () => {
     <>
       {/* Hamburger button */}
       <motion.button
-        className="flex flex-col justify-between items-center w-8 h-5 bg-transparent border-none cursor-pointer"
+        className="flex flex-col items-center justify-between w-8 h-5 bg-transparent border-none cursor-pointer"
         onClick={handleClick}
         initial={false}
         animate={isOpen ? "open" : "closed"}
@@ -35,7 +35,7 @@ export const Hamburger = () => {
         transition={{ duration: 0.3 }}
       >
         <motion.div
-          className="w-7 h-1 bg-neutral-800 rounded-full"
+          className="h-1 rounded-full w-7 bg-neutral-800"
           variants={{
             open: {
               transform: "translateY(8px) rotate(45deg)",
@@ -47,7 +47,7 @@ export const Hamburger = () => {
           transition={{ duration: 0.3 }}
         />
         <motion.div
-          className="w-7 h-1 bg-neutral-800 rounded-full"
+          className="h-1 rounded-full w-7 bg-neutral-800"
           variants={{
             open: {
               opacity: 0,
@@ -59,7 +59,7 @@ export const Hamburger = () => {
           transition={{ duration: 0.3 }}
         />
         <motion.div
-          className="w-7 h-1 bg-neutral-800 rounded-full"
+          className="h-1 rounded-full w-7 bg-neutral-800"
           variants={{
             open: {
               transform: "translateY(-8px) rotate(-45deg)",
@@ -82,7 +82,7 @@ export const Hamburger = () => {
             transition={{ duration: 0.5 }}
             className="fixed bg-black/50 w-full left-0 top-12 md:top-14 lg:top-16 z-50 h-[calc(100vh-48px)] md:h-[calc(100vh-56px)] lg:h-[calc(100vh-64px)])"
           >
-            <ul className="flex flex-col items-start text-base font-bold italic bg-white px-5 border-t-2 border-t-neutral-200 py-2">
+            <ul className="flex flex-col items-start px-5 py-2 text-base italic font-bold bg-white border-t-2 border-t-neutral-200">
               {menuItems.map(({ route, title }, index) => (
                 <motion.li
                   key={index}
