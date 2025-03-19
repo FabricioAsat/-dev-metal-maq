@@ -9,6 +9,10 @@ export const Links = () => {
     { title: "Soporte", route: "/support" },
   ];
 
+  const handleGoTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <motion.nav
       className="items-center justify-center hidden w-full gap-x-7 lg:flex"
@@ -27,7 +31,9 @@ export const Links = () => {
             delay: index * 0.1, // Cada item aparece con un pequeño retraso
           }}
         >
-          <Link href={route}>{title}</Link>
+          <Link onClick={handleGoTop} href={route}>
+            {title}
+          </Link>
         </motion.li>
       ))}
     </motion.nav>

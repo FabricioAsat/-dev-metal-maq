@@ -16,6 +16,11 @@ export const Hamburger = () => {
     setIsOpen(!isOpen);
   }
 
+  const handleGoTop = () => {
+    setIsOpen(!isOpen);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       {/* Hamburger button */}
@@ -92,7 +97,7 @@ export const Hamburger = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="py-1 hover:text-neutral-500"
                 >
-                  <Link onClick={handleClick} href={route}>
+                  <Link onClick={handleGoTop} href={route}>
                     {title}
                   </Link>
                 </motion.li>
